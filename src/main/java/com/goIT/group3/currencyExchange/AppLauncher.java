@@ -1,7 +1,16 @@
 package com.goIT.group3.currencyExchange;
 
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+
 public class AppLauncher {
     public static void main(String[] args) {
-        System.out.printf("Привіт");
+        try {
+            TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+            botsApi.registerBot(new CurrentExchangeBot());
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
     }
 }
