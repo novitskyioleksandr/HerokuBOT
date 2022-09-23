@@ -5,6 +5,7 @@ public enum ButtonName {
     INFO("\u2709\uFE0F  Info"),
     SETTINGS("\u2699\uFE0F Settings"),
     BACK("Back"),
+    BACK_TO_START("Back"),
 
     BANK("\uD83C\uDFE6 Bank"),
     MONOBANK("Monobank"),
