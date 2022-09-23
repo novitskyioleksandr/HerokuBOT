@@ -56,6 +56,7 @@ public class ButtonContainer {
                 .put(TIME_UPDATE_DISABLE_CALLBACK.getCallback(), timeUpdateButton)
                 .put(BACK_CALLBACK.getCallback(), new BackButton(sendMessageBotService))
                 .put(MY_SETTINGS_CALLBACK.getCallback(), new MySettings(sendMessageBotService))
+                .put(BACK_TO_START_CALLBACK.getCallback(), new BackToStartButton(sendMessageBotService))
                 .build();
         unknownCommand = new UnknownCommand(sendMessageBotService);
     }
