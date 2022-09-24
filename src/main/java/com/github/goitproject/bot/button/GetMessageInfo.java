@@ -89,6 +89,6 @@ public class GetMessageInfo {
             return currency + "/UAH" + "\n" +
                     "Purchase rate: " + priceBuy + "\n" + "Selling rate: " + priceSale + "\n\n";
         }
-        return null;
+        return null;//?
     }
 }

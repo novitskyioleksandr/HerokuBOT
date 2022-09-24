@@ -49,63 +49,45 @@ public class MySettings implements Button {
             case 4:
                 message.append("4\n");
         }
+
+
         message.append("Notification time:  ");
         if (!settings.isCheckDisableTimeUpdate()) {
+
             switch (settings.getTimeUpdate()) {
-                case "6:00":
-                    message.append("6:00\n");
-                    break;
-                case "7:00":
-                    message.append("7:00\n");
-                    break;
-                case "8:00":
-                    message.append("8:00\n");
-                    break;
-                case "9:00":
+
+                case 9:
                     message.append("9:00\n");
                     break;
-                case "10:00":
+                case 10:
                     message.append("10:00\n");
                     break;
-                case "11:00":
+                case 11:
                     message.append("11:00\n");
                     break;
-                case "12:00":
+                case 12:
                     message.append("12:00\n");
                     break;
-                case "13:00":
+                case 13:
                     message.append("13:00\n");
                     break;
-                case "14:00":
+                case 14:
                     message.append("14:00\n");
                     break;
-                case "15:00":
+                case 15:
                     message.append("15:00\n");
                     break;
-                case "16:00":
+                case 16:
                     message.append("16:00\n");
                     break;
-                case "17:00":
+                case 17:
                     message.append("17:00\n");
                     break;
-                case "18:00":
+                case 18:
                     message.append("18:00\n");
-                    break;
-                case "19:00":
-                    message.append("19:00\n");
-                    break;
-                case "20:00":
-                    message.append("20:00\n");
-                    break;
-                case "21:00":
-                    message.append("21:00\n");
-                    break;
-                case "Notifications turned off":
-                    message.append("Notifications turned off\n");
-                    break;
             }
         } else
-            message.append("Turn off\n");
+            message.append("Turn off.\n");
         sendMessageBotService.SendMessage(chatId, message.toString());
     }
 }

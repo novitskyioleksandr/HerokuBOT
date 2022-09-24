@@ -7,6 +7,7 @@ import com.google.common.collect.ImmutableMap;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.HELP_CALLBACK;
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.*;
 
@@ -24,7 +25,9 @@ public class ButtonContainer {
         buttonMap = ImmutableMap.<String, Button>builder()
                 .put(START.getName(), new StartButton(sendMessageBotService))
                 .put(INFO_CALLBACK.getCallback(), new GetInfoButton(sendMessageBotService))
+
                 .put(SETTINGS_CALLBACK.getCallback(), new SettingsButton(sendMessageBotService))
+
                 .put(CURRENCY_CALLBACK.getCallback(), currencyButton)
                 .put(USD_CALLBACK.getCallback(), currencyButton)
                 .put(EUR_CALLBACK.getCallback(), currencyButton)
@@ -40,11 +43,10 @@ public class ButtonContainer {
                 .put(PRECISION_THREE_CALLBACK.getCallback(), precisionButton)
                 .put(PRECISION_FOUR_CALLBACK.getCallback(), precisionButton)
                 .put(TIME_UPDATE_CALLBACK.getCallback(), timeUpdateButton)
-                .put(TIME_UPDATE_SIX_CALLBACK.getCallback(), timeUpdateButton)
-                .put(TIME_UPDATE_SEVEN_CALLBACK.getCallback(), timeUpdateButton)
-                .put(TIME_UPDATE_EIGHT_CALLBACK.getCallback(), timeUpdateButton)
+
+
                 .put(TIME_UPDATE_NINE_CALLBACK.getCallback(), timeUpdateButton)
-                .put(TIME_UPDATE_TEN_CALLBACK.getCallback(), timeUpdateButton)
+                .put(TIME_UPDATE_THEN_CALLBACK.getCallback(), timeUpdateButton)
                 .put(TIME_UPDATE_ELEVEN_CALLBACK.getCallback(), timeUpdateButton)
                 .put(TIME_UPDATE_TWELVE_CALLBACK.getCallback(), timeUpdateButton)
                 .put(TIME_UPDATE_THIRTEEN_CALLBACK.getCallback(), timeUpdateButton)
@@ -53,8 +55,11 @@ public class ButtonContainer {
                 .put(TIME_UPDATE_SIXTEEN_CALLBACK.getCallback(), timeUpdateButton)
                 .put(TIME_UPDATE_SEVENTEEN_CALLBACK.getCallback(), timeUpdateButton)
                 .put(TIME_UPDATE_EIGHTEEN_CALLBACK.getCallback(), timeUpdateButton)
+
                 .put(TIME_UPDATE_DISABLE_CALLBACK.getCallback(), timeUpdateButton)
-                .put(BACK_CALLBACK.getCallback(), new BackButton(sendMessageBotService))
+                .put(BACK_CALLBACK.getCallback(), new   BackButton(sendMessageBotService))
+
+                .put(HELP_CALLBACK.getCallback(), new HelpButton(sendMessageBotService))
                 .put(MY_SETTINGS_CALLBACK.getCallback(), new MySettings(sendMessageBotService))
                 .build();
         unknownCommand = new UnknownCommand(sendMessageBotService);
