@@ -14,6 +14,10 @@ import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 public class StartButton implements Button {
     private final SendMessageBotService sendMessageBotService;
     private final InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+
+    private InlineKeyboardButton buttonGetInfo = new InlineKeyboardButton();
+
+
     public final static String START_MESSAGE = "Hello, %s. Here you can find current exchange rates.";
 
     public StartButton(SendMessageBotService sendMessageBotService) {
@@ -28,15 +32,25 @@ public class StartButton implements Button {
     }
 
     private InlineKeyboardMarkup createKeyBoard() {
+        /*
+         private InlineKeyboardButton buttonSettings = new InlineKeyboardButton();
+    private List<InlineKeyboardButton> buttonsRow1 = new ArrayList<>();
+    private List<InlineKeyboardButton> buttonsRow2 = new ArrayList<>();
+    private List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+         */
         InlineKeyboardButton buttonGetCurrent = new InlineKeyboardButton();
         InlineKeyboardButton buttonSettings = new InlineKeyboardButton();
         List<InlineKeyboardButton> buttonsRow1 = new ArrayList<>();
         List<InlineKeyboardButton> buttonsRow2 = new ArrayList<>();
         List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
+        buttonGetInfo.setText(INFO.getName());
         buttonGetCurrent.setText(INFO.getName());
         buttonSettings.setText(SETTINGS.getName());
+        buttonGetInfo.setCallbackData(INFO_CALLBACK.getCallback());
         buttonGetCurrent.setCallbackData(INFO_CALLBACK.getCallback());
         buttonSettings.setCallbackData(SETTINGS_CALLBACK.getCallback());
+        buttonsRow1.add(buttonGetInfo);
         buttonsRow1.add(buttonGetCurrent);
         buttonsRow2.add(buttonSettings);
         rowList.add(buttonsRow1);

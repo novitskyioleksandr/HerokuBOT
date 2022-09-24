@@ -13,7 +13,7 @@ public class Settings {
     private boolean isCheckMonoBank;
     private boolean isCheckPrivatBank;
     private boolean isCheckNBU;
-    private String TimeUpdate;
+    private Integer TimeUpdate;
     private boolean isCheckDisableTimeUpdate;
     private Integer precision;
     private Long chatId;
@@ -29,7 +29,7 @@ public class Settings {
         isCheckMonoBank = false;
         isCheckPrivatBank = false;
         isCheckNBU = true;
-        TimeUpdate = "9:00";
+        TimeUpdate = 9;
         isCheckDisableTimeUpdate = true;
         precision = 2;
     }
@@ -106,11 +106,11 @@ public class Settings {
         isCheckNBU = checkNBU;
     }
 
-    public String getTimeUpdate() {
+    public Integer getTimeUpdate() {
         return TimeUpdate;
     }
 
-    public void setTimeUpdate(String timeUpdate) {
+    public void setTimeUpdate(Integer timeUpdate) {
         TimeUpdate = timeUpdate;
     }
 
