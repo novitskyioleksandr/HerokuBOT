@@ -38,11 +38,8 @@ public class StartButton implements Button {
         List<InlineKeyboardButton> buttonsRow2 = new ArrayList<>();
         List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
-        InlineKeyboardButton buttonGetCurrent = new InlineKeyboardButton();
-//        InlineKeyboardButton buttonSettings = new InlineKeyboardButton();
-//        List<InlineKeyboardButton> buttonsRow1 = new ArrayList<>();
-//        List<InlineKeyboardButton> buttonsRow2 = new ArrayList<>();
-//        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+        //InlineKeyboardButton buttonGetCurrent = new InlineKeyboardButton();
+
         buttonGetInfo.setText(INFO.getName());
         buttonSettings.setText(SETTINGS.getName());
         buttonGetInfo.setCallbackData(INFO_CALLBACK.getCallback());
@@ -54,18 +51,6 @@ public class StartButton implements Button {
         inlineKeyboardMarkup.setKeyboard(rowList);
         return inlineKeyboardMarkup;
 
-//        buttonGetInfo.setText(INFO.getName());
-//        buttonGetCurrent.setText(INFO.getName());
-//        buttonSettings.setText(SETTINGS.getName());
-//        buttonGetInfo.setCallbackData(INFO_CALLBACK.getCallback());
-//        buttonGetCurrent.setCallbackData(INFO_CALLBACK.getCallback());
-//        buttonSettings.setCallbackData(SETTINGS_CALLBACK.getCallback());
-//        buttonsRow1.add(buttonGetInfo);
-//        buttonsRow1.add(buttonGetCurrent);
-//        buttonsRow2.add(buttonSettings);
-//        rowList.add(buttonsRow1);
-//        rowList.add(buttonsRow2);
-//        inlineKeyboardMarkup.setKeyboard(rowList);
-//        return inlineKeyboardMarkup;
+
     }
 }

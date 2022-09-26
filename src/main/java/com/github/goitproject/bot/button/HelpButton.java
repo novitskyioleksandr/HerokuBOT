@@ -6,14 +6,15 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 public class HelpButton implements Button {
     private final SendMessageBotService sendMessageBotService;
     private final static String MESSAGE_HELP = "Help: \n" +
-            "️  Get info - get the current exchange rate depending on the settings.\n\n" +
-            "️  Settings - choice of currency, bank, accuracy and notification time\n\n" +
-            "\uD83C\uDFAF   Number of decimal places - selection of course display accuracy (default 2)\n\n" +
-            "\uD83C\uDFE6   Bank - bank selection (default NBU)\n\n" +
-            "\uD83D\uDCB0   Currency - currency selection (USD by default)\n\n" +
-            "  Notification time - select the time of notifications about the exchange rate according to the specified settings (default is 9:00)\n\n" +
-            "\uD83D\uDD27   My settings - show current settings\n\n" +
-            "   Turn off notifications\n";
+
+            "️   Отримати інформацю - отримати поточний курс обміну в залежності від налаштувань.\n\n" +
+            "️   Налаштування - вибір валюти, банку, точності та часу повідомлення\n\n" +
+            "\uD83C\uDFAF   Кількість знаків після коми - вибір точності відображення курсу (за замовчуванням 2)\n\n" +
+            "\uD83C\uDFE6   Банк - вибір банку (за замовчуванням НБУ)\n\n" +
+            "\uD83D\uDCB0   Валюта - вибір валюти (USD за замовчуванням)\n\n" +
+            "     Час повідомлень - виберіть час повідомлень про курс валют відповідно до заданих налаштувань (за замовчуванням 9:00) \n\n" +
+            "\uD83D\uDD27   Мої налаштування - показати поточні налаштування \n\n" +
+            "     Вимкніть сповіщення \n";
 
     public HelpButton(SendMessageBotService sendMessageBotService) {
         this.sendMessageBotService = sendMessageBotService;

@@ -2,16 +2,16 @@ package com.github.goitproject.bot.button.enum_button;
 
 public enum ButtonName {
     START("/start"),
-    INFO("\u2709\uFE0F  Info"),
-    SETTINGS("\u2699\uFE0F Settings"),
-    BACK("Back"),
+    INFO("\u2709\uFE0F  Інформація"),
+    SETTINGS("\u2699\uFE0F Налаштування"),
+    BACK("Повернутись"),
 
-    BANK("\uD83C\uDFE6 Bank"),
-    MONOBANK("Monobank"),
-    PRIVATBANK("Privatbank"),
-    NBU("NBU"),
+    BANK("\uD83C\uDFE6 Банк"),
+    MONOBANK("Монобанк"),
+    PRIVATBANK("Приватбанк"),
+    NBU("НБУ"),
 
-    CURRENCY("\uD83D\uDCB0 Currency"),
+    CURRENCY("\uD83D\uDCB0 Валюта"),
     USD("USD"),
     EUR("EUR"),
     CZK("CZK"),
@@ -19,12 +19,12 @@ public enum ButtonName {
     PLZ("PLZ"),
     GBP("GBP"),
 
-    PRECISION("\uD83C\uDFAF Number of decimal places"),
+    PRECISION("\uD83C\uDFAF Кіл-сть знаків після коми"),
     PRECISION_TWO("2"),
     PRECISION_THREE("3"),
     PRECISION_FOUR("4"),
 
-    TIME_UPDATE("\u23F0  Notification time"),//?
+    TIME_UPDATE("\u23F0  Час сповіщень"),//?
 
     TIME_UPDATE_NINE("9:00"),
     TIME_UPDATE_THEN("10:00"),
@@ -37,7 +37,7 @@ public enum ButtonName {
     TIME_UPDATE_SEVENTEEN("17:00"),
     TIME_UPDATE_EIGHTEEN("18:00"),
 
-    TIME_UPDATE_DISABLE("turn off");
+    TIME_UPDATE_DISABLE("Вимкнути");
     private String buttonName;
 
     ButtonName(String buttonName) {
