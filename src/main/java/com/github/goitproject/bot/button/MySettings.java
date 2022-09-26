@@ -14,18 +14,18 @@ public class MySettings implements Button {
     public void execute(Update update, Settings settings) {
         String chatId = update.getMessage().getChatId().toString();
         StringBuilder message = new StringBuilder();
-        message.append("\uD83D\uDD27  My settings: \n");
-        message.append("Bank: ");
+        message.append("\uD83D\uDD27  Мої налаштування: \n");
+        message.append("Банк: ");
         if (settings.isCheckNBU())
-            message.append("NBU ");
+            message.append("НБУ ");
         if (settings.isCheckMonoBank())
-            message.append("Monobank ");
+            message.append("Монобанк ");
         if (settings.isCheckPrivatBank())
-            message.append("Privatbank ");
+            message.append("Приватбанк ");
 
         message.append("\n");
 
-        message.append("Currency: ");
+        message.append("Валюта: ");
         if (settings.isCheckUSD())
             message.append("USD ");
         if (settings.isCheckEUR())
@@ -37,7 +37,7 @@ public class MySettings implements Button {
         if (settings.isCheckGBP())
             message.append("GBP ");
         message.append("\n");
-        message.append("Number of decimal places: ");
+        message.append("Кількість знаків після коми: ");
 
         switch (settings.getPrecision()) {
             case 2:
@@ -51,7 +51,7 @@ public class MySettings implements Button {
         }
 
 
-        message.append("Notification time:  ");
+        message.append("Час сповіщення:  ");
         if (!settings.isCheckDisableTimeUpdate()) {
 
             switch (settings.getTimeUpdate()) {
@@ -87,7 +87,7 @@ public class MySettings implements Button {
                     message.append("18:00\n");
             }
         } else
-            message.append("Turn off.\n");
+            message.append("Вимкнути.\n");
         sendMessageBotService.SendMessage(chatId, message.toString());
     }
 }

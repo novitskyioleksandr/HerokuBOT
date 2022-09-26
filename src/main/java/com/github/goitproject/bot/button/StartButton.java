@@ -18,7 +18,7 @@ public class StartButton implements Button {
     private InlineKeyboardButton buttonGetInfo = new InlineKeyboardButton();
 
 
-    public final static String START_MESSAGE = "Hello, %s. Here you can find current exchange rates.";
+    public final static String START_MESSAGE = "Ласкаво просимо, %s. Цей бот допоможе відслідковувати актуальні курси валют.";
 
     public StartButton(SendMessageBotService sendMessageBotService) {
         this.sendMessageBotService = sendMessageBotService;
@@ -37,8 +37,6 @@ public class StartButton implements Button {
         List<InlineKeyboardButton> buttonsRow1 = new ArrayList<>();
         List<InlineKeyboardButton> buttonsRow2 = new ArrayList<>();
         List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
-
-        //InlineKeyboardButton buttonGetCurrent = new InlineKeyboardButton();
 
         buttonGetInfo.setText(INFO.getName());
         buttonSettings.setText(SETTINGS.getName());

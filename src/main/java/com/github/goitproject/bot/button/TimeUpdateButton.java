@@ -16,7 +16,7 @@ public class TimeUpdateButton implements Button {
     private final SendMessageBotService sendMessageBotService;
     private static String data;
     private Settings settings;
-    private final static String MESSAGE = "\u231A   Select time message   ";//⏱
+    private final static String MESSAGE = "Виберіть час повідомлення";//⏱
     private final static String CHECK = "\u2705";//✅
     private final static String BACK_EMOJI = "\u2B05\uFE0F";//⬅
     private InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();

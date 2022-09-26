@@ -16,10 +16,10 @@ public class PrecisionButton implements Button {
     private static String data;
     private Settings settings;
     private Integer messageId;
-    private final static String MESSAGE = "\uD83C\uDFAF Select the number of decimal places";
-    private final static String CHECK = "\u2705";
+    private final static String MESSAGE = "Виберіть кількість знаків після коми";//🎯
+    private final static String CHECK = "\u2705";//✅
     private final static String UNCHECK = "";
-    private final static String BACK_EMOJI = "\u2B05\uFE0F";
+    private final static String BACK_EMOJI = "\u2B05\uFE0F";//⬅️
 
     private  InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
     private  InlineKeyboardButton buttonTWO = new InlineKeyboardButton();
