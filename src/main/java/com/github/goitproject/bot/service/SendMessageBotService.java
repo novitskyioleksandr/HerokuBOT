@@ -21,7 +21,7 @@ public class SendMessageBotService {
         this.telegramBot = telegramBot;
     }
 
-   // @Override
+
     public void SendMessage(String chatId, String message, ReplyKeyboard replyKeyboard) {
 
         SendMessage sendMessage = new SendMessage();

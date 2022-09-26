@@ -15,10 +15,10 @@ public class CurrencyButton implements Button {
     private final SendMessageBotService sendMessageBotService;
     private static String data;
     private Settings settings;
-    private final static String MESSAGE = "\uD83D\uDCB0 Choose currency";
-    private final static String CHECK = "\u2705";
+    private final static String MESSAGE = "Виберіть валюту";//💰
+    private final static String CHECK = "✅";//✅
     private final static String UNCHECK = "";
-    private final static String BACK_EMOJI = "\u2B05\uFE0F";
+    private final static String BACK_EMOJI = "⬅";//⬅️
 
     private final InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
     private final InlineKeyboardButton buttonUSD = new InlineKeyboardButton();

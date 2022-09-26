@@ -2,16 +2,17 @@ package com.github.goitproject.bot.button.enum_button;
 
 public enum ButtonName {
     START("/start"),
-    INFO("\u2709\uFE0F  Отримати інфо"),
-    SETTINGS("\u2699\uFE0F Налаштування"),
-    BACK("Назад"),
+    INFO("\u2709\uFE0F  Info"),
+    SETTINGS("\u2699\uFE0F Settings"),
+    BACK("Back"),
+    BACK_TO_START("Back"),
 
-    BANK("\uD83C\uDFE6 Банк"),
+    BANK("\uD83C\uDFE6 Банк"),//🏦
     MONOBANK("Монобанк"),
     PRIVATBANK("Приватбанк"),
     NBU("НБУ"),
 
-    CURRENCY("\uD83D\uDCB0 Валюти"),
+    CURRENCY("\uD83D\uDCB0 Currency"),
     USD("USD"),
     EUR("EUR"),
     CZK("CZK"),
@@ -24,10 +25,8 @@ public enum ButtonName {
     PRECISION_THREE("3"),
     PRECISION_FOUR("4"),
 
-    TIME_UPDATE("\u23F0 Час оповіщень"),
-    TIME_UPDATE_SIX("6:00"),
-    TIME_UPDATE_SEVEN("7:00"),
-    TIME_UPDATE_EIGHT("8:00"),
+    TIME_UPDATE("\u23F0 Час сповіщень"),//⏰
+
     TIME_UPDATE_NINE("9:00"),
     TIME_UPDATE_TEN("10:00"),
     TIME_UPDATE_ELEVEN("11:00"),

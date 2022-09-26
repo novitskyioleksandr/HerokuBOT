@@ -9,7 +9,6 @@ public class AppLauncher {
         try {
             TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
             telegramBotsApi.registerBot(new TelegramBot());
-
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
