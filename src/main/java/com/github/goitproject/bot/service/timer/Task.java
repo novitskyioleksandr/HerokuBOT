@@ -13,8 +13,8 @@ import java.util.stream.Collectors;
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 
 public class Task extends TimerTask {
-    private final TelegramBot telegramBot;
-    private final GetMessageInfo getMessage = new GetMessageInfo();
+    private  TelegramBot telegramBot;
+    private  GetMessageInfo getMessage = new GetMessageInfo();
 
     public Task(TelegramBot telegramBot) {
         this.telegramBot = telegramBot;

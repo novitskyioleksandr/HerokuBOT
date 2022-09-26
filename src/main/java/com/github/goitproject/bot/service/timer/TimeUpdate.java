@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 public class TimeUpdate {
 
-    private final Timer timer;
-    private final Task task;
+    private Timer timer;
+    private  Task task;
     private static final long ONE_HOUR = 3600000L;
 
     public TimeUpdate(TelegramBot telegramBot) {
