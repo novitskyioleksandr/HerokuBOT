@@ -2,9 +2,10 @@ package com.github.goitproject.bot.button.enum_button;
 
 public enum ButtonName {
     START("/start"),
-    INFO("Інформація"),//✉️
-    SETTINGS(" Налаштування"),//⚙️
-    BACK("Повернутись"),
+    INFO("\u2709\uFE0F  Info"),
+    SETTINGS("\u2699\uFE0F Settings"),
+    BACK("Back"),
+    BACK_TO_START("Back"),
 
     BANK("Банк"),//🏦
     MONOBANK("Монобанк"),

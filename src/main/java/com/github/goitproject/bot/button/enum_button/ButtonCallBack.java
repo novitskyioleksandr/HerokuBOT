@@ -6,6 +6,7 @@ public enum ButtonCallBack {
     MY_SETTINGS_CALLBACK("/my_settings"),
     HELP_CALLBACK("/help"),
     BACK_CALLBACK("/back"),
+    BACK_TO_START_CALLBACK("/back_to_start"),
 
     BANK_CALLBACK("bank"),
     MONOBANK_CALLBACK("mono_bank"),

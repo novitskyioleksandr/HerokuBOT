@@ -46,6 +46,7 @@ public class PrecisionButton implements Button {
         if (data.equals(PRECISION_CALLBACK.getCallback())) {
             buttonsRow1.clear();
             buttonsRow2.clear();
+
             rowList.clear();
             sendMessageBotService.EditMessage(chatId, messageId, MESSAGE, createKeyBoard());
         } else if ((data.equals(PRECISION_TWO_CALLBACK.getCallback()) && settings.getPrecision() != 2) ||
