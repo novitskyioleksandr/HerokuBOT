@@ -23,7 +23,7 @@ public class MonoAPI {
                     .equals(CZK_CODE.getCode()) || mb.getCurrencyCodeA()
                     .equals(PLN_CODE.getCode()) || mb.getCurrencyCodeA().equals(GBR_CODE.getCode())) {
                 BankResponse bankResponse = new BankResponse();
-                bankResponse.setBank("Monobank");
+                bankResponse.setBank("Монобанк");
                 bankResponse.setBuy(mb.getRateBuy());
                 bankResponse.setSale(mb.getRateSell());
                 bankResponse.setCross(mb.getRateCross());

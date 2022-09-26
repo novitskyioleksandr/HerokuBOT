@@ -30,7 +30,9 @@ public class Task extends TimerTask {
         List<Settings> toListSettings = new ArrayList<>(settings.values());
         for (Settings st : toListSettings) {
             if (!st.isCheckDisableTimeUpdate()) {
-                if (st.getTimeUpdate().equals(LocalTime.now().getHour())) {
+                String timeUpdate = st.getTimeUpdate();
+                if (timeUpdate.substring(0, timeUpdate.indexOf(':'))
+                        .equals(String.valueOf(LocalTime.now().getHour()))) {
                     Long chatId = st.getChatId();
                     sendMessage.setChatId(chatId.toString());
                     if (st.isCheckNBU()) {
