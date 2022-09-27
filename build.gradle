@@ -43,7 +43,7 @@ apply plugin: 'heroku'
 
 heroku {
     //get this from heroku
-    apiKey = 'my-api-key'
+    apiKey = '9ded4695-fb34-4b7e-b829-831cd97d1b85'
 
     //set this on first run if you don't want a generated name
     //appName = 'some-unique-app-name'
