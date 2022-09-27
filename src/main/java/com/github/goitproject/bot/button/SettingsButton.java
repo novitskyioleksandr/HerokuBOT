@@ -5,14 +5,13 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.*;
 
 public class SettingsButton implements Button {
+    private final static String BACK_EMOJI = "\u2B05\uFE0F";
     private final SendMessageBotService sendMessageBotService;
     private final InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
     private final InlineKeyboardButton button1 = new InlineKeyboardButton();
@@ -61,7 +60,7 @@ public class SettingsButton implements Button {
         button4.setText(TIME_UPDATE.getName());
         button4.setCallbackData(TIME_UPDATE_CALLBACK.getCallback());
 
-        button5.setText(BACK_TO_START.getName());
+        button5.setText(BACK_EMOJI+BACK_TO_START.getName());
         button5.setCallbackData(BACK_TO_START_CALLBACK.getCallback());
 
         buttonsRow1.add(button1);

@@ -4,10 +4,8 @@ import com.github.goitproject.bot.service.SendMessageBotService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.*;
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 
@@ -15,10 +13,10 @@ public class BankButton implements Button {
     private final SendMessageBotService sendMessageBotService;
     private static String data;
     private Settings settings;
-    private final static String MESSAGE = "Виберіть банк";//🏦
-    private final static String CHECK = "✅";//✅
+    private final static String MESSAGE = "\uD83C\uDFE6 Виберіть банк";
+    private final static String CHECK = "\u2705";
     private final static String UNCHECK = "";
-    private final static String BACK_EMOJI = "⬅";//⬅️
+    private final static String BACK_EMOJI = "\u2B05\uFE0F";
 
     private final InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
     private final InlineKeyboardButton buttonNBU = new InlineKeyboardButton();

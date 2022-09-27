@@ -17,11 +17,11 @@ public class MySettings implements Button {
         message.append("\uD83D\uDD27  Мої налаштування: \n");
         message.append("Банк: ");
         if (settings.isCheckNBU())
-            message.append("НБУ ");
+            message.append("НБУ");
         if (settings.isCheckMonoBank())
-            message.append("Монобанк ");
+            message.append("Монобанк");
         if (settings.isCheckPrivatBank())
-            message.append("Приватбанк ");
+            message.append("Приватбанк");
 
         message.append("\n");
 
@@ -51,43 +51,41 @@ public class MySettings implements Button {
         }
 
 
-        message.append("Час сповіщення:  ");
+        message.append("Час оповіщення:  ");
         if (!settings.isCheckDisableTimeUpdate()) {
-
             switch (settings.getTimeUpdate()) {
-
-                case 9:
+                case "9:00":
                     message.append("9:00\n");
                     break;
-                case 10:
+                case "10:00":
                     message.append("10:00\n");
                     break;
-                case 11:
+                case "11:00":
                     message.append("11:00\n");
                     break;
-                case 12:
+                case "12:00":
                     message.append("12:00\n");
                     break;
-                case 13:
+                case "13:00":
                     message.append("13:00\n");
                     break;
-                case 14:
+                case "14:00":
                     message.append("14:00\n");
                     break;
-                case 15:
+                case "15:00":
                     message.append("15:00\n");
                     break;
-                case 16:
+                case "16:00":
                     message.append("16:00\n");
                     break;
-                case 17:
+                case "17:00":
                     message.append("17:00\n");
                     break;
-                case 18:
+                case "18:00":
                     message.append("18:00\n");
             }
         } else
-            message.append("Вимкнути.\n");
+            message.append("Вимкнути оповіщення\n");
         sendMessageBotService.SendMessage(chatId, message.toString());
     }
 }

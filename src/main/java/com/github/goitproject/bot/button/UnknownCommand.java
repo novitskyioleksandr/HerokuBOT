@@ -13,6 +13,6 @@ public class UnknownCommand implements Button{
     @Override
     public void execute(Update update, Settings settings) {
         String chatId = update.getMessage().getChatId().toString();
-        sendMessageBotService.SendMessage(chatId,"Wrong command \uD83E\uDD2A");
+        sendMessageBotService.SendMessage(chatId,"Невірна команда \uD83E\uDD2A");
     }
 }

@@ -4,10 +4,8 @@ import com.github.goitproject.bot.service.SendMessageBotService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.*;
 
@@ -15,22 +13,22 @@ public class PrecisionButton implements Button {
     private final SendMessageBotService sendMessageBotService;
     private static String data;
     private Settings settings;
-    private Integer messageId;
-    private final static String MESSAGE = "Виберіть кількість знаків після коми";//🎯
-    private final static String CHECK = "\u2705";//✅
+    private final static String MESSAGE = "\uD83C\uDFAF Виберіть кількість знаків після коми";
+    private final static String CHECK = "\u2705";
     private final static String UNCHECK = "";
-    private final static String BACK_EMOJI = "\u2B05\uFE0F";//⬅️
+    private final static String BACK_EMOJI = "\u2B05\uFE0F";
 
-    private  InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-    private  InlineKeyboardButton buttonTWO = new InlineKeyboardButton();
-    private  InlineKeyboardButton buttonTHREE = new InlineKeyboardButton();
-    private  InlineKeyboardButton buttonFOUR = new InlineKeyboardButton();
-    private  InlineKeyboardButton buttonBack = new InlineKeyboardButton();
 
-    private  List<InlineKeyboardButton> buttonsRow1 = new ArrayList<>();
-    private  List<InlineKeyboardButton> buttonsRow2 = new ArrayList<>();
+    private final InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+    private final InlineKeyboardButton buttonTWO = new InlineKeyboardButton();
+    private final InlineKeyboardButton buttonTHREE = new InlineKeyboardButton();
+    private final InlineKeyboardButton buttonFOUR = new InlineKeyboardButton();
+    private final InlineKeyboardButton buttonBack = new InlineKeyboardButton();
 
-    private  List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+    private final List<InlineKeyboardButton> buttonsRow1 = new ArrayList<>();
+    private final List<InlineKeyboardButton> buttonsRow2 = new ArrayList<>();
+
+    private final List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
     public PrecisionButton(SendMessageBotService sendMessageBotService) {
         this.sendMessageBotService = sendMessageBotService;
@@ -41,7 +39,7 @@ public class PrecisionButton implements Button {
         this.settings = settings;
 
         String chatId = update.getCallbackQuery().getMessage().getChatId().toString();
-        messageId = update.getCallbackQuery().getMessage().getMessageId();
+        Integer messageId = update.getCallbackQuery().getMessage().getMessageId();
         data = update.getCallbackQuery().getData();
         if (data.equals(PRECISION_CALLBACK.getCallback())) {
             buttonsRow1.clear();

@@ -4,7 +4,6 @@ import com.github.goitproject.bot.service.SendMessageBotService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,9 +12,8 @@ import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.*;
 
 public class BackButton implements Button {
     private final SendMessageBotService sendMessageBotService;
-    private Integer messageId;
-
-    private InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+    private final static String BACK_EMOJI = "\u2B05\uFE0F";
+    private final InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
     InlineKeyboardButton button1 = new InlineKeyboardButton();
     InlineKeyboardButton button2 = new InlineKeyboardButton();
     InlineKeyboardButton button3 = new InlineKeyboardButton();
@@ -34,7 +32,7 @@ public class BackButton implements Button {
     @Override
     public void execute(Update update, Settings settings) {
         String chatId = update.getCallbackQuery().getMessage().getChatId().toString();
-        messageId = update.getCallbackQuery().getMessage().getMessageId();
+        Integer messageId = update.getCallbackQuery().getMessage().getMessageId();
         buttonsRow1.clear();
         buttonsRow2.clear();
         buttonsRow3.clear();
@@ -55,7 +53,7 @@ public class BackButton implements Button {
         button4.setText(TIME_UPDATE.getName());
         button4.setCallbackData(TIME_UPDATE_CALLBACK.getCallback());
 
-        button5.setText(BACK_TO_START.getName());
+        button5.setText(BACK_EMOJI+BACK_TO_START.getName());
         button5.setCallbackData(BACK_TO_START_CALLBACK.getCallback());
 
         buttonsRow1.add(button1);

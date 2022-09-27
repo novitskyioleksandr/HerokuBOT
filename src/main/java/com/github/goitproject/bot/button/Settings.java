@@ -1,8 +1,5 @@
 package com.github.goitproject.bot.button;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class Settings {
 
     private boolean isCheckUSD;
@@ -13,7 +10,7 @@ public class Settings {
     private boolean isCheckMonoBank;
     private boolean isCheckPrivatBank;
     private boolean isCheckNBU;
-    private Integer TimeUpdate;
+    private String TimeUpdate;
     private boolean isCheckDisableTimeUpdate;
     private Integer precision;
     private Long chatId;
@@ -29,7 +26,7 @@ public class Settings {
         isCheckMonoBank = false;
         isCheckPrivatBank = false;
         isCheckNBU = true;
-        TimeUpdate = 9;
+        TimeUpdate = "9:00";
         isCheckDisableTimeUpdate = true;
         precision = 2;
     }
@@ -106,11 +103,11 @@ public class Settings {
         isCheckNBU = checkNBU;
     }
 
-    public Integer getTimeUpdate() {
+    public String getTimeUpdate() {
         return TimeUpdate;
     }
 
-    public void setTimeUpdate(Integer timeUpdate) {
+    public void setTimeUpdate(String timeUpdate) {
         TimeUpdate = timeUpdate;
     }
 

@@ -2,9 +2,7 @@ package com.github.goitproject.bot.bank.privat;
 
 import com.github.goitproject.bot.bank.BankResponse;
 import com.github.goitproject.bot.service.ClientService;
-
 import java.util.ArrayList;
-
 import static com.github.goitproject.bot.bank.enum_bank.BankPath.*;
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 
@@ -21,7 +19,7 @@ public class PrivatAPI {
         for (PrivatBank pb : currency_USD_EUR) {
             if (pb.getCcy().equals(USD.getName()) || pb.getCcy().equals(EUR.getName())) {
                 BankResponse bankResponse = new BankResponse();
-                bankResponse.setBank("Privatbank");
+                bankResponse.setBank("Приватбанк");
                 bankResponse.setBuy(pb.getBuy());
                 bankResponse.setSale(pb.getSale());
                 bankResponse.setCurrency(pb.getCcy());
@@ -30,7 +28,7 @@ public class PrivatAPI {
         for (PrivatBank pb : currency_CZK_PLN_GBP) {
             if (pb.getCcy().equals(CZK.getName()) || pb.getCcy().equals(PLZ.getName()) || pb.getCcy().equals(GBP.getName())) {
                 BankResponse bankResponse = new BankResponse();
-                bankResponse.setBank("Privatbank");
+                bankResponse.setBank("Приватбанк");
                 bankResponse.setBuy(pb.getBuy());
                 bankResponse.setSale(pb.getSale());
                 bankResponse.setCurrency(pb.getCcy());

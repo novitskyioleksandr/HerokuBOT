@@ -5,16 +5,14 @@ import com.github.goitproject.bot.button.GetMessageInfo;
 import com.github.goitproject.bot.button.Settings;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-
 import java.time.LocalTime;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 
 public class Task extends TimerTask {
-    private  TelegramBot telegramBot;
-    private  GetMessageInfo getMessage = new GetMessageInfo();
+    private final TelegramBot telegramBot;
+    private final GetMessageInfo getMessage = new GetMessageInfo();
 
     public Task(TelegramBot telegramBot) {
         this.telegramBot = telegramBot;

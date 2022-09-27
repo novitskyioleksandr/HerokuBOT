@@ -6,22 +6,17 @@ import com.github.goitproject.bot.service.SendMessageBotService;
 import com.github.goitproject.bot.service.timer.TimeUpdate;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
-
 import java.util.Map;
-import java.util.logging.Logger;
-
 
 public class TelegramBot extends TelegramLongPollingBot {
 
-    static final Logger log = Logger.getLogger(String.valueOf(TelegramBot.class));
     private final ButtonContainer buttonContainer;
-    private static final String BOT_USER_NAME = "CurrencyBotGoitGroup3_bot";
-    private static final String TOKEN = "5744631073:AAEojydF2x9RbZkiJ6CSgCSF2otNtL7KmKA";
-    private TimeUpdate timeUpdate;
+    private static final String BOT_USER_NAME = "Currency_Exchange_CoIT_Bot";
+    private static final String TOKEN = "5751558801:AAFa8sEoRF4LIXBNbsHkL1q_S-LaTCf-8J0";
 
     public TelegramBot() {
         this.buttonContainer = new ButtonContainer(new SendMessageBotService(this));
-        timeUpdate = new TimeUpdate(this);
+        TimeUpdate timeUpdate = new TimeUpdate(this);
         timeUpdate.startTimer();
     }
 

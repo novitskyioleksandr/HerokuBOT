@@ -9,9 +9,9 @@ import com.github.goitproject.bot.button.enum_button.ButtonName;
 import java.util.ArrayList;
 
 public class Facade {
-    private  MonoAPI monoAPI = new MonoAPI();
-    private  NbuAPI nbuAPI = new NbuAPI();
-    private  PrivatAPI privatAPI = new PrivatAPI();
+    private final MonoAPI monoAPI = new MonoAPI();
+    private final NbuAPI nbuAPI = new NbuAPI();
+    private final PrivatAPI privatAPI = new PrivatAPI();
 
     public ArrayList<BankResponse> getInfo(ButtonName bank) throws Exception {
         switch (bank) {

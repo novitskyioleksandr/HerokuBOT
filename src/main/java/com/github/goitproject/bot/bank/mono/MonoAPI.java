@@ -2,9 +2,7 @@ package com.github.goitproject.bot.bank.mono;
 
 import com.github.goitproject.bot.bank.BankResponse;
 import com.github.goitproject.bot.service.ClientService;
-
 import java.util.ArrayList;
-
 import static com.github.goitproject.bot.bank.enum_bank.BankCode.*;
 import static com.github.goitproject.bot.bank.enum_bank.BankPath.MONO_PATH;
 

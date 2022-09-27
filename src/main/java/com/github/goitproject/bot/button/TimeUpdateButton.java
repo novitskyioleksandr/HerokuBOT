@@ -4,11 +4,8 @@ import com.github.goitproject.bot.service.SendMessageBotService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.*;
 import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.*;
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 
@@ -16,22 +13,22 @@ public class TimeUpdateButton implements Button {
     private final SendMessageBotService sendMessageBotService;
     private static String data;
     private Settings settings;
-    private final static String MESSAGE = "Виберіть час повідомлення";//⏱
-    private final static String CHECK = "\u2705";//✅
-    private final static String BACK_EMOJI = "\u2B05\uFE0F";//⬅
-    private InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+    private final static String MESSAGE = "\u23F0 Виберіть час оповіщення";
+    private final static String CHECK = "\u2705";
+    private final static String BACK_EMOJI = "\u2B05\uFE0F";
+    private final InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
     private List<InlineKeyboardButton> buttonsRow1 = new ArrayList<>();
     private List<InlineKeyboardButton> buttonsRow2 = new ArrayList<>();
     private List<InlineKeyboardButton> buttonsRow3 = new ArrayList<>();
     private List<InlineKeyboardButton> buttonsRow4 = new ArrayList<>();
     private List<InlineKeyboardButton> buttonsRow5 = new ArrayList<>();
 
-    private List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+    private final List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
 
     public TimeUpdateButton(SendMessageBotService sendMessageBotService) {
         this.sendMessageBotService = sendMessageBotService;
         buttonsRow1.add(InlineKeyboardButton.builder().text(TIME_UPDATE_NINE.getName()).callbackData(TIME_UPDATE_NINE_CALLBACK.getCallback()).build());
-        buttonsRow1.add(InlineKeyboardButton.builder().text(TIME_UPDATE_THEN.getName()).callbackData(TIME_UPDATE_THEN_CALLBACK.getCallback()).build());
+        buttonsRow1.add(InlineKeyboardButton.builder().text(TIME_UPDATE_TEN.getName()).callbackData(TIME_UPDATE_TEN_CALLBACK.getCallback()).build());
         buttonsRow1.add(InlineKeyboardButton.builder().text(TIME_UPDATE_ELEVEN.getName()).callbackData(TIME_UPDATE_ELEVEN_CALLBACK.getCallback()).build());
 
         buttonsRow2.add(InlineKeyboardButton.builder().text(TIME_UPDATE_TWELVE.getName()).callbackData(TIME_UPDATE_TWELVE_CALLBACK.getCallback()).build());
@@ -60,7 +57,7 @@ public class TimeUpdateButton implements Button {
         Integer messageId = update.getCallbackQuery().getMessage().getMessageId();
         data = update.getCallbackQuery().getData();
         if (data.equals(TIME_UPDATE_CALLBACK.getCallback())) {
-            sendMessageBotService.EditMessage(chatId, messageId,MESSAGE, createKeyBoard());
+            sendMessageBotService.EditMessage(chatId, messageId, MESSAGE, createKeyBoard());
         } else {
             sendMessageBotService.EditMessage(chatId, messageId, MESSAGE, editKeyBoard());
         }
@@ -112,7 +109,7 @@ public class TimeUpdateButton implements Button {
                     } else {
                         if (bt.getCallbackData().equals(data)) {
                             bt.setText(CHECK + bt.getCallbackData());
-                            Integer time = Integer.valueOf(bt.getCallbackData());
+                            String time = bt.getCallbackData();
                             settings.setTimeUpdate(time);
                         }
                     }
