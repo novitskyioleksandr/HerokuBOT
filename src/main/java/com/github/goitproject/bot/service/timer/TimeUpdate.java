@@ -3,14 +3,13 @@ package com.github.goitproject.bot.service.timer;
 import com.github.goitproject.bot.TelegramBot;
 
 import java.time.LocalTime;
-import java.util.Date;
 import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 
 public class TimeUpdate {
 
-    private Timer timer;
-    private  Task task;
+    private final Timer timer;
+    private final Task task;
     private static final long ONE_HOUR = 3600000L;
 
     public TimeUpdate(TelegramBot telegramBot) {

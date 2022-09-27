@@ -2,9 +2,7 @@ package com.github.goitproject.bot.bank.mono;
 
 import com.github.goitproject.bot.bank.BankResponse;
 import com.github.goitproject.bot.service.ClientService;
-
 import java.util.ArrayList;
-
 import static com.github.goitproject.bot.bank.enum_bank.BankCode.*;
 import static com.github.goitproject.bot.bank.enum_bank.BankPath.MONO_PATH;
 
@@ -23,7 +21,7 @@ public class MonoAPI {
                     .equals(CZK_CODE.getCode()) || mb.getCurrencyCodeA()
                     .equals(PLN_CODE.getCode()) || mb.getCurrencyCodeA().equals(GBR_CODE.getCode())) {
                 BankResponse bankResponse = new BankResponse();
-                bankResponse.setBank("Monobank");
+                bankResponse.setBank("Монобанк");
                 bankResponse.setBuy(mb.getRateBuy());
                 bankResponse.setSale(mb.getRateSell());
                 bankResponse.setCross(mb.getRateCross());

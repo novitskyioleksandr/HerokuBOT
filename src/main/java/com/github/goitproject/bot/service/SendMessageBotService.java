@@ -2,16 +2,10 @@ package com.github.goitproject.bot.service;
 
 import com.github.goitproject.bot.TelegramBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.methods.updatingmessages.DeleteMessage;
-import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageCaption;
-import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageReplyMarkup;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-
-import java.io.Serializable;
 
 public class SendMessageBotService {
     private final TelegramBot telegramBot;
@@ -23,7 +17,6 @@ public class SendMessageBotService {
 
 
     public void SendMessage(String chatId, String message, ReplyKeyboard replyKeyboard) {
-
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.enableHtml(true);

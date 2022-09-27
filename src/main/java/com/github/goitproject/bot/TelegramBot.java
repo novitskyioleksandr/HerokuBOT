@@ -6,23 +6,17 @@ import com.github.goitproject.bot.service.SendMessageBotService;
 import com.github.goitproject.bot.service.timer.TimeUpdate;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
-
 import java.util.Map;
-import java.util.logging.Logger;
-
 
 public class TelegramBot extends TelegramLongPollingBot {
 
-    static final Logger log = Logger.getLogger(String.valueOf(TelegramBot.class));
     private final ButtonContainer buttonContainer;
-    private static final String BOT_USER_NAME = "CurrencyExchangeGoBot";
-    private static final String TOKEN = "5678614363:AAGFa3P6WT-RT3klAz6G8WLp0F5QagXZgVg";
-
-    private TimeUpdate timeUpdate;
+    private static final String BOT_USER_NAME = "Currency_Exchange_CoIT_Bot";
+    private static final String TOKEN = "5751558801:AAFa8sEoRF4LIXBNbsHkL1q_S-LaTCf-8J0";
 
     public TelegramBot() {
         this.buttonContainer = new ButtonContainer(new SendMessageBotService(this));
-        timeUpdate = new TimeUpdate(this);
+        TimeUpdate timeUpdate = new TimeUpdate(this);
         timeUpdate.startTimer();
     }
 
@@ -44,7 +38,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         if (update.hasMessage()) {
             buttonIdentifier = update.getMessage().getText().trim();
             chatId = update.getMessage().getChatId();
-             buttonContainer.retrieveButton(buttonIdentifier).execute(update, buttonContainer.getSettingsCurrentUser(chatId));
+            buttonContainer.retrieveButton(buttonIdentifier).execute(update, buttonContainer.getSettingsCurrentUser(chatId));
         } else if (update.hasCallbackQuery()) {
             chatId = update.getCallbackQuery().getMessage().getChatId();
             buttonIdentifier = update.getCallbackQuery().getData();

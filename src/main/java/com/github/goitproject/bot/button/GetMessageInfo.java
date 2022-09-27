@@ -3,7 +3,6 @@ package com.github.goitproject.bot.button;
 import com.github.goitproject.bot.Facade;
 import com.github.goitproject.bot.bank.BankResponse;
 import com.github.goitproject.bot.button.enum_button.ButtonName;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -28,10 +27,10 @@ public class GetMessageInfo {
         }
 
         if (responses == null) {
-            return "Request error " + bank.getName() + ". Try again later or select another bank";
+            return "Помилка запиту " + bank.getName() + ". Спробуйте знову пізніше або оберіть інший банк";
         }
 
-        message = "Currency rate  " + bank.getName() + ":\n";
+        message = "Курс валют  " + bank.getName() + ":\n";
 
         if (!settings.isCheckUSD() && !settings.isCheckEUR() && !settings.isCheckCZK()
                 && !settings.isCheckPLN() && !settings.isCheckGBP()) {
@@ -75,19 +74,19 @@ public class GetMessageInfo {
             if (USD.getName().equals(currency)
                     || EUR.getName().equals(currency)) {
                 return currency + "/UAH" + "\n" +
-                        "Purchase rate: " + priceBuy + "\n" + "Selling rate: " + priceSale + "\n\n";
+                        "Курс закупки: " + priceBuy + "\n" + "Курс продажу: " + priceSale + "\n\n";
             } else {
                 return currency + "/UAH" + "\n" +
-                        "Cross rate: " + priceCross + "\n\n";
+                        "Курс: " + priceCross + "\n\n";
             }
         }
         if (bank == NBU) {
             return currency + "/UAH" + "\n" +
-                    "Rate: " + priceRate + "\n\n";
+                    "Курс: " + priceRate + "\n\n";
         }
         if (bank == PRIVATBANK) {
             return currency + "/UAH" + "\n" +
-                    "Purchase rate: " + priceBuy + "\n" + "Selling rate: " + priceSale + "\n\n";
+                    "Курс закупки: " + priceBuy + "\n" + "Курс продажу: " + priceSale + "\n\n";
         }
         return null;
     }

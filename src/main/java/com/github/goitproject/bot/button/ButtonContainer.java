@@ -2,11 +2,8 @@ package com.github.goitproject.bot.button;
 
 import com.github.goitproject.bot.service.SendMessageBotService;
 import com.google.common.collect.ImmutableMap;
-
-
 import java.util.HashMap;
 import java.util.Map;
-
 import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.HELP_CALLBACK;
 import static com.github.goitproject.bot.button.enum_button.ButtonName.*;
 import static com.github.goitproject.bot.button.enum_button.ButtonCallBack.*;
@@ -44,9 +41,8 @@ public class ButtonContainer {
                 .put(PRECISION_FOUR_CALLBACK.getCallback(), precisionButton)
                 .put(TIME_UPDATE_CALLBACK.getCallback(), timeUpdateButton)
 
-
                 .put(TIME_UPDATE_NINE_CALLBACK.getCallback(), timeUpdateButton)
-                .put(TIME_UPDATE_THEN_CALLBACK.getCallback(), timeUpdateButton)
+                .put(TIME_UPDATE_TEN_CALLBACK.getCallback(), timeUpdateButton)
                 .put(TIME_UPDATE_ELEVEN_CALLBACK.getCallback(), timeUpdateButton)
                 .put(TIME_UPDATE_TWELVE_CALLBACK.getCallback(), timeUpdateButton)
                 .put(TIME_UPDATE_THIRTEEN_CALLBACK.getCallback(), timeUpdateButton)
@@ -58,10 +54,10 @@ public class ButtonContainer {
 
                 .put(TIME_UPDATE_DISABLE_CALLBACK.getCallback(), timeUpdateButton)
                 .put(BACK_CALLBACK.getCallback(), new   BackButton(sendMessageBotService))
+                .put(BACK_TO_START_CALLBACK.getCallback(), new BackToStartButton(sendMessageBotService))
 
                 .put(HELP_CALLBACK.getCallback(), new HelpButton(sendMessageBotService))
                 .put(MY_SETTINGS_CALLBACK.getCallback(), new MySettings(sendMessageBotService))
-                .put(BACK_TO_START_CALLBACK.getCallback(), new BackToStartButton(sendMessageBotService))
                 .build();
         unknownCommand = new UnknownCommand(sendMessageBotService);
     }

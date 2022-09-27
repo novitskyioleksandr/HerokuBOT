@@ -6,7 +6,7 @@ public enum BankCode {
     CZK_CODE(203),
     PLN_CODE(985),
     GBR_CODE(826);
-    private Integer code;
+    private final Integer code;
 
     BankCode(Integer code) {
         this.code = code;
