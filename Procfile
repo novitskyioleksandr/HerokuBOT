@@ -1,1 +1,1 @@
-web: java -jar /src/main/java/com/github/goitproject/bot/AppLauncher.java
+web: java -jar /.idea/artifacts/Currency_exchange_jar.xml
