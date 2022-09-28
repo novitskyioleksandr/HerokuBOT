@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
+bot: java -jar /src/main/java/com/github/goitproject/bot/TelegramBot.java
