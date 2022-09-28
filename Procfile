@@ -1,1 +1,1 @@
-web: java -jar /src/main/java/com/github/goitproject/bot/TelegramBot.java
+web: java -jar /src/main/java/com/github/goitproject/bot/AppLauncher.java
