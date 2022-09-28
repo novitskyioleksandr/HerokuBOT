@@ -1,1 +1,1 @@
-web: java -jar /out/artifacts/Currency_exchange_main_jar/Currency_exchange.main.jar
+web: java -jar out/artifacts/Currency_exchange_jar/Currency_exchange.jar
