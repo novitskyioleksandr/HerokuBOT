@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar out/artifacts/Currency_exchange_jar/Currency_exchange.jar --port $PORT target/*.war
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar out/artifacts/Currency_exchange_jar/Currency_exchange.jar
